@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_settings">
+        <ListPreference
+                android:key="pref_time_options"
+                android:title="@string/pref_time_options_label"
+                android:summary="%s"
+                android:entries="@array/pref_time_options"
+                android:entryValues="@array/pref_time_options_values"/>
+
+        <EditTextPreference
+            android:key="pref_custom_times"
+            android:title="@string/pref_custom_times_label"
+            android:dialogMessage="@string/pref_custom_times_message" />
+
+        <Preference
+            android:key="pref_softreboot"
+            android:title="@string/pref_soft_reboot_label"
+            android:summary="@string/pref_soft_reboot_message" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_about">
+        <Preference
+            android:key="pref_about"
+            android:title="@string/app_name"
+            android:summary="@string/pref_about_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>
