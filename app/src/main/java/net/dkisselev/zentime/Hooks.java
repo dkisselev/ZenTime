@@ -1,18 +1,13 @@
 package net.dkisselev.zentime;
 
-import java.util.Arrays;
-
-import static de.robv.android.xposed.XposedHelpers.findAndHookMethod;
-import static de.robv.android.xposed.XposedHelpers.setStaticIntField;
-import static de.robv.android.xposed.XposedHelpers.setStaticObjectField;
-
 import de.robv.android.xposed.IXposedHookLoadPackage;
-import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.XSharedPreferences;
-import de.robv.android.xposed.XC_MethodHook;
+import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 
-public class Xposed implements IXposedHookLoadPackage {
+import static de.robv.android.xposed.XposedHelpers.setStaticObjectField;
+
+public class Hooks implements IXposedHookLoadPackage {
     private XSharedPreferences prefs;
     private static final String LOG_TAG = "ZenTIme: ";
 
